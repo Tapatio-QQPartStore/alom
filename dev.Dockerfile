@@ -1,8 +1,11 @@
-FROM mkenney/npm:debian
+FROM ruby:2.4
 
-RUN mkdir -p /usr/src/app
-WORKDIR /usr/src/app
+RUN mkdir -p /code
 
-ADD . /usr/src/app
+WORKDIR /code
 
-RUN npm install
+RUN gem install bundler --no-ri --no-rdoc
+
+ADD . /code/
+
+RUN bundle install

@@ -1,4 +1,4 @@
-source "https://rubygems.org"
+source 'https://rubygems.org'
 
-
-gem 'scss_lint', require: false
+# Specify your gem's dependencies in alom.gemspec
+gemspec
